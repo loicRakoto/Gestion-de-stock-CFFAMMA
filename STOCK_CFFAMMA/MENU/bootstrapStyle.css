@@ -1,0 +1,258 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+    font-size: 16px;
+
+}
+
+:root {
+    --red: rgb(211, 47, 69);
+    --red2: rgb(12 43 44);
+    --black: rgb(27, 25, 25);
+    --blanc: #fbfbfb;
+    --test: rgb(235, 231, 231);
+}
+
+.loadere {
+    position: absolute;
+    z-index: 9999;
+    background-color: #fbfbfb;
+    top: 0px;
+    height: 100%;
+    width: 100%;
+    cursor: wait;
+}
+
+.contenee {
+    margin-top: 100px;
+}
+
+.loadere .iconee {
+    text-align: center;
+}
+
+.iconee i {
+    font-size: 270px;
+}
+
+.loadere .textee {
+    text-align: center;
+    margin-top: 36px;
+}
+
+.textChar {
+    font-size: 80px;
+}
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+    background-color: var(--blanc)
+}
+
+.container1 {
+    position: relative;
+    width: 100%;
+}
+
+.navigation {
+    position: fixed;
+    width: 300px;
+    height: 100%;
+    background: var(--red2);
+    transition: 0.5s;
+    overflow: hidden;
+    white-space: nowrap;
+
+
+}
+
+.navigation.active {
+    width: 70px;
+
+
+}
+
+.navigation ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-left: 0px;
+}
+
+.navigation ul li {
+    position: relative;
+    width: 100%;
+    list-style: none;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+
+.navigation ul li.hovered {
+    background: var(--blanc);
+}
+
+.navigation ul li:nth-child(1) {
+    margin-bottom: 40px;
+    pointer-events: none;
+}
+
+.navigation ul li a {
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: var(--blanc);
+
+
+}
+
+
+.navigation ul li.hovered a {
+    color: var(--red2);
+
+
+}
+
+.navigation ul li .icon {
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 0px;
+    line-height: 60px;
+    text-align: center;
+}
+
+.navigation ul li .icon .fa-solid {
+    font-size: 1.75em;
+}
+
+.navigation ul li .icon .fa-brands {
+    font-size: 1.75em;
+}
+
+.navigation ul li a .title {
+    position: relative;
+    display: block;
+    padding: 0 10px;
+    line-height: 60px;
+    text-align: start;
+}
+
+
+.navigation ul li.hovered a::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: -83%;
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    border-radius: 50%;
+    box-shadow: 35px 35px 0 10px var(--blanc);
+    pointer-events: none;
+}
+
+
+.navigation ul li.hovered a::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -83%;
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    border-radius: 50%;
+    box-shadow: 35px -35px 0 10px var(--blanc);
+    pointer-events: none;
+}
+
+.main {
+    position: absolute;
+    width: calc(100% - 300px);
+    left: 300px;
+    min-height: 100vh;
+    transition: 0.5s;
+}
+
+.main.active {
+    width: calc(100% - 70px);
+    left: 70px;
+}
+
+.topbar {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15px;
+    margin-bottom: 55px;
+
+
+}
+
+.toggle {
+    width: 60px;
+    height: 60px;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 45px;
+    color: var(--red2);
+
+}
+
+.toggle i {
+    font-size: 35px;
+    cursor: pointer;
+}
+
+.search {
+    width: 400px;
+    position: relative;
+    margin: 10px 10px;
+
+}
+
+.search label {
+    width: 100%;
+    position: relative;
+}
+
+.search label input {
+    width: 100%;
+    height: 40px;
+    border-radius: 40px;
+    padding: 5px 40px;
+    outline: none;
+    border: 1px solid black;
+    font-size: 15px;
+}
+
+.search label .fa-solid {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    font-size: 20px;
+}
+
+.info {
+    position: relative;
+    padding: 13px 20px;
+}
+
+i.fa-solid.fa-circle {
+    align-items: center;
+    text-align: center;
+    display: grid;
+    margin-left: 13px;
+    font-size: 7px;
+    color: #00bb00;
+
+}
